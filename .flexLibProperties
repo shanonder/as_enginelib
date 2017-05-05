@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.icday.net.socket.ErrorHandler"/>
+    <classEntry path="com.icday.net.socket.ConnectHandler"/>
+    <classEntry path="com.icday.net.socket.CloseHandler"/>
+    <classEntry path="com.icday.net.socket.MessageHandler"/>
+    <classEntry path="com.icday.net.interfaces.ISocketData"/>
+    <classEntry path="com.icday.CsvParser"/>
+    <classEntry path="com.icday.mvcs.Context"/>
+    <classEntry path="com.icday.mvcs.IModule"/>
+    <classEntry path="com.icday.mvcs.DataEvent"/>
+    <classEntry path="com.icday.mvcs.ModelBase"/>
+    <classEntry path="com.icday.mvcs.ICommand"/>
+    <classEntry path="com.icday.net.interfaces.INetRequest"/>
+    <classEntry path="com.icday.net.socket.SocketConst"/>
+    <classEntry path="com.icday.net.socket.SocketRequestBase"/>
+    <classEntry path="com.icday.mvcs.ModuleBase"/>
+    <classEntry path="com.icday.LayoutManager"/>
+    <classEntry path="com.icday.layouts.LayerManager"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
