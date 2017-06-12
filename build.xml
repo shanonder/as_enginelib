@@ -1,0 +1,36 @@
+<project name="EngineLib" default="EngineLib" basedir=".">
+
+<property file="build.properties"/>
+
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar"/>
+	<target name="EngineLib">
+		<path id="paths">
+			<pathelement path="${basedir}/"/>
+		</path>
+		<pathconvert dirsep="/" property="covbasedir" refid="paths"/>
+		<fileset dir="${covbasedir}/src" id="files">    
+			<include name="**/*.as"/>
+		</fileset>   
+		<pathconvert property="classes" pathsep=" " dirsep="." refid="files">   
+			<map from="\" to="/"/>    
+			<map from="${covbasedir}/src/" to=""/>    
+			<mapper>    
+				<chainedmapper>    
+					<globmapper from="*.as" to="*"/>    
+				</chainedmapper>    
+			</mapper>    
+		</pathconvert>
+
+		
+		<echo message="${classes}"/>
+		<compc output="${OUTPUT_DIR}/EngineLib.swc" include-classes="${classes}" 
+		    optimize="true" benchmark="true" strict="true" actionscript-file-encoding="utf-8" 
+		    locale="en_US" allow-source-path-overlap="true" >
+			<source-path path-element="${covbasedir}/src"/>
+
+		<compiler.external-library-path dir="${LIBS_DIR}" append="true">
+		   <!-- <include name="*.swc"/> -->
+		</compiler.external-library-path>
+		</compc>            
+	</target>
+</project>
